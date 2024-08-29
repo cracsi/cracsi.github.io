@@ -1,65 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página Romántica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Capital</title>
     <style>
         body {
-            background-color: pink;
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('2192450.jpg'); /* Reemplaza 'corazones.png' con la URL de tu imagen de corazones */
-            
+            background: linear-gradient(to bottom, white, black);
+            color: #333;
         }
-        h1 {
-            color: red;
+
+        .banner {
+            background-color: black;
+            color: white;
             text-align: center;
+            padding: 50px 0;
+            font-size: 2em;
         }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+
+        .content {
             padding: 20px;
-            background-color:pink;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: auto;
         }
-        p {
-            text-align: justify;
+
+        .floating-box {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .floating-box h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>¡¡¡¡¡¡Felices dos años corazoncitooooo!!!!!!</h1>
-        <img src="novi.jpeg" alt="Imagen Romántica">
-        <p>
-            Hola mi amor, quiero decirte que te amo desde que llegaste a mi vida todo ha cambiado para bien.
-            Soy más feliz y aprendo cada día a amar a mi novi espectacular, hermosa, preciosa, perfecta. Me alegra mucho y estoy
-            muy orgulloso de como eres juiciosi, emprendedori, inquieti (en el buen sentido), trabajadori, tierni, empática, cariñosa, divertidi,
-            inteligenti, queridi, guapi y miles de cosas más. Me emociona que estés disfrutando intercambi, aaprendiendi, disfrutando, experimentando cosas nuevas, y aprendiendo mucho de moda.
-            Lo único troste es que te extraño demasiadísimo, solo pienso en ti cada segundo, que la estés pasando bien, disfrutando del viaje, aprendiendo mucho,
-            y pasándola rico. Cuento cada segundo que pasa para volverte a ver, darte besitos, apachurrarte, consentirte, mega abrazarte y amarte. </n>
-            <br></br>
-            <br>
-            Aprovecho este espacio para decirte que te amo por que la distancia hace que sea complicado decirlo en persona, pero no dudes ni por un segundo que nuestros corazones están 
-            juntitos en todo momento, y que pesar de que estemos lejos te siento cerca cada instante que pasa. Desde el principio supe que eras alguien especial y que tendrías un impacto
-            giganteso en mi vida. Eres el amor de mi vida y estoy muy agradecido de que hayas llegado a mi vida a alegrarme y darme amor. También quiero agradecerte por permitirme entrar a tu vida 
-            donde hago el mayor esfuerzo posible para darte amor y hacerte sentirte la persona más especial del mundo por que eso significas para mí, eres el amor de mi vida, eres mi mundo entero y te amo infinitamente. 
-            Cierro este mini cartita/blog agradeciéndote por el tiempo juntos, estos dos añitos de amor incondicional y diciéndote que quiero estar contigo el resto de mi vida por que eres el amor de mi vida y deseo lo mejor del mundo. 
-            Nos veremos muuuuy pronti, te amo demasiado y espero con ansias cada segundo para poder besasrte y abrazarte de nuevo.  
-            <br></br>
-            <br>   </br>
-            <a href="https://vs.co/wt0zhs56">haz click aquí para una sorpresita</a>
 
-            </br>
-
-
-        </p>
+    <div class="banner">
+        HUMAN CAPITAL
     </div>
+
+    <div class="content">
+        <p>
+            Con el RFI podemos darle:
+            <ul>
+                <li>Más beneficios a los empleados</li>
+                <li>Mejorar su capacidad adquisitiva</li>
+                <li>Generar un ahorro considerable para la empresa y los colaboradores</li>
+            </ul>
+        </p>
+
+        <div class="floating-box">
+            <h2>¡ Calcula el estimado de cuánto podría llegar a ser tu ahorro como empresa !</h2>
+            <form>
+                <label for="numEmpleados">Número de empleados</label>
+                <input type="number" id="numEmpleados" name="numEmpleados">
+
+                <label for="porcSalarioIntegral">Porcentaje de empleados que reciben salario integral</label>
+                <input type="text" id="porcSalarioIntegral" name="porcSalarioIntegral">
+
+                <label for="sueldoPromedio">Sueldo promedio empleados</label>
+                <input type="text" id="sueldoPromedio" name="sueldoPromedio">
+
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
