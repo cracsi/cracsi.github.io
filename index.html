@@ -71,7 +71,48 @@
         button:hover {
             background-color: darkblue;
         }
+
+        /* Estilos para el pop-up */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: black;
+        }
+
+        .popup input[type="text"], .popup input[type="email"], .popup input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: red;
+        }
     </style>
+    <script src="scripi.js"></script>
 </head>
 <body>
 
@@ -91,7 +132,7 @@
 
         <div class="floating-box">
             <h2>¡ Calcula el estimado de cuánto podría llegar a ser tu ahorro como empresa !</h2>
-            <form>
+            <form id="mainForm">
                 <label for="numEmpleados">Número de empleados</label>
                 <input type="number" id="numEmpleados" name="numEmpleados">
 
@@ -101,9 +142,33 @@
                 <label for="sueldoPromedio">Sueldo promedio empleados</label>
                 <input type="text" id="sueldoPromedio" name="sueldoPromedio">
 
-                <button type="submit">Calcular</button>
+                <button type="button" id="calcularBtn">Calcular</button>
             </form>
         </div>
+    </div>
+
+    <!-- Pop-up Form -->
+    <div id="popupForm" class="popup">
+        <span class="popup-close" id="closePopup">&times;</span>
+        <h2>Primero danos algunos datos para conocerte mejor</h2>
+        <form id="popupDataForm">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="empresa">Nombre de la empresa</label>
+            <input type="text" id="empresa" name="empresa" required>
+
+            <label for="cargo">Cargo</label>
+            <input type="text" id="cargo" name="cargo" required>
+
+            <label for="correo">Correo institucional</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Número telefónico</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
 </body>
